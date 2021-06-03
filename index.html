@@ -16,7 +16,8 @@
           }
           $(document).ready(function(){
              $('#large_box').click(function(){
-                $('div').children().css('background-color', random_color);    
+                $(this).children().css('background-color', random_color()) 
+                $(this).css('background-color', random_color()) 
                 });    
             
                 //alert('you clicked the big box!');  
@@ -24,16 +25,16 @@
              
              $('.side_box').click(function(event){
               event.stopPropagation();
-              $('div').siblings().css('background-color', random_color)
+              $(this).siblings().css('background-color', random_color())
                 });
               $('.middle_box').click(function(event){
               event.stopPropagation();
-              $('div').parent('#large_box').css('background-color', random_color);
+              $(this).parent('#large_box').css('background-color', random_color());
                 });
             });
              
 
-        
+           
       </script>
       <style type="text/css">
           *{
